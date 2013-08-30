@@ -39,3 +39,30 @@ This function is **tail recursive**: the last thing we do is to call a function,
       Acc;
     run_baby_run(N, Acc) ->
       run_baby_run(N-1, Acc ++ ".").
+
+## IO
+
+    Msg = "Hello world".
+    io:format("~p~n", [Msg]).
+
+`io:format` **does not return a string**, it prints it out as a side-effect.
+
+`~p` pretty print string
+`~n` new line
+
+## Lists
+
+    [1, 2, 3, 4]
+    [1, a, 2, b]
+
+    Head = 1.
+    Tail = [2, 3, 4].
+    [Head|Tail].
+    => [1, 2, 3, 4]
+    [1 | [2, 3, 4]].
+    => [1, 2, 3, 4]
+
+    [Head|Tail] = [1, a, 2, b]
+    Head => 1
+    Tail => [a, 2, b]
+
