@@ -14,6 +14,8 @@
 
 `f(_X)` the underscore means we don't care about the variable.
 
+Order is significant (but not for performance reasons).
+
 ### Guards
 
     not_less_than_2(N) when N >= 2 ->
