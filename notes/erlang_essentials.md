@@ -66,3 +66,28 @@ This function is **tail recursive**: the last thing we do is to call a function,
     Head => 1
     Tail => [a, 2, b]
 
+## Strings
+
+Just syntactic sugar for list of character codes.
+
+## Anonymous Functions
+
+    fun() -> ok end
+    F = fun(X) -> [X] end
+    F(abc)
+    => [abc]
+
+Higher-order function:
+
+    lists:map(fun(N) -> N * 2 end, [1, 2, 3]).
+
+## Case
+
+    a_is_a(X)
+      case X of
+        a ->
+          true;
+        _ ->
+          false
+      end.
+
