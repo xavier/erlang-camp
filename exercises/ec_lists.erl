@@ -25,6 +25,7 @@ twomult([H|T]) ->
 twomult_comp(L) ->
   [X * 2 || X <- L].
 
+-spec(yourmap(fun(), list()) -> list()).
 yourmap(_, []) ->
   [];
 yourmap(Fun, [_H|_T]) ->
