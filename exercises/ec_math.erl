@@ -10,5 +10,5 @@ op('+', A, B) ->
   op(add, A, B);
 op(add, A, B) ->
   A + B;
-op(sub, A, B) ->
+op(sub, A, B) when A >= B ->
   A - B.
