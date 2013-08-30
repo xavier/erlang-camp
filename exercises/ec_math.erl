@@ -5,6 +5,7 @@
 -module(ec_math).
 -export([op/3]).
 
+-spec(op(atom(), number(), number()) -> number()).
 op('+', A, B) ->
   op(add, A, B);
 op(add, A, B) ->
