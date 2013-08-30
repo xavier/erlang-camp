@@ -1,4 +1,3 @@
 *.beam
 *.app
 *.log
-deps
