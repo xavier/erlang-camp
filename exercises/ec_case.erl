@@ -5,12 +5,13 @@
 -module(ec_case).
 -export([is_a_list/1]).
 
+-spec(is_a_list(list() | any()) -> boolean()).
 is_a_list(L) ->
   case L of
     [] ->
       true;
-    [_|_] ->
+    [_H|_T] ->
       true;
-    _ ->
+    _Else ->
       false
   end.
