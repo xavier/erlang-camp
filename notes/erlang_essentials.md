@@ -91,3 +91,30 @@ Higher-order function:
           false
       end.
 
+
+## Exceptions
+
+Very uncommon and non-idiomatic in Erlang.
+
+    try list:reverse(a) of
+      List -> ok
+    catch
+      Error:Exception ->
+        fixit()
+    after
+      always_do_this()
+    end
+
+* `thrown/1`: user exception
+* `exit/1`:
+* `error`: thrown by the VM
+
+Read: [http://leikind.org/errors\_and\_processes/](http://leikind.org/errors_and_processes/)
+
+## Processes
+
+Processes are the fundamental unit of concurrency and cannot interfere with each other.
+
+    spawn(fun() -> io:format("hello") end).
+
+spawn returns `Pid`
