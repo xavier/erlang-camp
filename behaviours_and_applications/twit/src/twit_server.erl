@@ -9,7 +9,7 @@
 -export([init/1, handle_call/3, handle_cast/2, handle_info/2,
 	 terminate/2, code_change/3]).
 
--define(SERVER, ?MODULE). 
+-define(SERVER, ?MODULE).
 
 -record(state, {subscriptions}).
 
@@ -56,6 +56,7 @@ follow(Name) ->
 %%                     ignore |
 %%                     {stop, Reason}
 init([]) ->
+    lager:info("This is lager! ~p", [self()]),
     {ok, #state{subscriptions = dict:new()}}.
 
 %% @doc
@@ -125,12 +126,12 @@ send_to_subscribers(Name, Msg, Subscriptions) ->
 	      Pid ! {twit, {Name, Msg}}
       end,
       get_subscription_list(Name, Subscriptions)).
-			  
+
 get_subscription_list(Name, Subscriptions) ->
     case dict:find(Name, Subscriptions) of
-	{ok, SubscriptionList} -> 
+	{ok, SubscriptionList} ->
 	    SubscriptionList;
-	error -> 	
+	error ->
 	    []
     end.
-    
+
