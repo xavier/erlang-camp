@@ -1,0 +1,23 @@
+
+Aug 30th
+
+Time  Session
+0900  Setup & Getting Started
+1000  Erlang Essentials 1
+1215  Lunch
+1315  Erlang Essentials Pt 2
+1415  Introducing OTP
+1615  Intermediate OTP
+1715  Events & Logs
+1815  Closing Remarks
+
+Aug 31st
+
+Time  Session
+0930  Meet and Greet (Socialization Time)
+1000  Distributing Erlang Systems
+1300  Lunch
+1400  Testing
+1630  Releases and Deployment
+1815  Closing Remarks
+2000  Drink & Talk Erlang
