@@ -15,7 +15,7 @@ print_each(Index, [Head|Tail]) ->
   io:format("~p is ~p~n", [Index, Head]),
   print_each(Index+1, Tail).
 
--spec(twomult(list()) -> list())
+-spec(twomult(list()) -> list()).
 twomult([]) ->
   [];
 twomult([H|T]) ->
