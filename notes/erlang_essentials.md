@@ -13,3 +13,10 @@
 `1 == 1` is a comparison and evaluates to `true`.
 
 `f(_X)` the underscore means we don't care about the variable.
+
+### Guards
+
+    not_less_than_2(N) when N >= 2 ->
+      "good";
+    not_less_than_2(N)
+      "bad".
