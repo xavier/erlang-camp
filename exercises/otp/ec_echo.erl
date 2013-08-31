@@ -6,5 +6,15 @@
 start() ->
   spawn(fun() ->
     register(ec_echo, self()),
-    receive {From, Msg} -> From ! Msg end
+    loop()
   end).
+
+loop() ->
+  receive
+    {From, stop} ->
+      From ! stopped,
+      ok;
+    {From, Msg} ->
+      From ! Msg,
+      loop()
+  end.
